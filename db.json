@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": "b24b",
+      "fname": "NTWALI",
+      "lname": "MUDASUBIRA GUSTAVE",
+      "email": "ntwalimudasubirag@gmail.com",
+      "password": "12345678",
+      "cpassword": "12345678"
+    },
+    {
+      "id": "67d0",
+      "fname": "UWERA",
+      "lname": "qweeqe",
+      "email": "uwerafrid@gmail.com",
+      "password": "mnbvcxz",
+      "cpassword": "mnbvcxz"
+    },
+    {
+      "id": "b540",
+      "fname": "Dame",
+      "lname": "Boy",
+      "email": "dameboy@gmail.com",
+      "password": "lpiowqe",
+      "cpassword": "eqyuq"
+    },
+    {
+      "id": "677f",
+      "fname": "okwima",
+      "lname": "Obongo",
+      "email": "akwima@yahoo.fr",
+      "password": "kilopkilop",
+      "cpassword": "kilopkilop"
+    },
+    {
+      "id": "1e84",
+      "fname": "hry",
+      "lname": "nmm ",
+      "email": "nmvty@gjm.bn",
+      "password": "1234567",
+      "cpassword": "1234567"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "16ba"
+    },
+    {
+      "id": "fa43",
+      "title": "Visit Pinsoe",
+      "description": "Klab high school leavers",
+      "image": ""
+    }
+  ]
+}
