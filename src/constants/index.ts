@@ -37,13 +37,13 @@ export const NAVBAR_LINKS = [
 export const IMAGE_DETAILS = [
     {
         date : "January 12 2024",
-        image : "src/assets/images/world.jpg",
+        image : "./src/assets/images/world.jpg",
         title : "VISIT RWANDA",
         text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit Repellat vero quibusdam exercitationem alias! Assumenda temporibus repellendus odio iusto dicta, sit corporis laudantium Corrupti, suscipit laudantium! Deleniti sequi numquam est libero",
     },
     {
         date : "January 12 2024",
-        image : "src/assets/images/world.jpg",
+        image : "./src/assets/images/world.jpg",
         title : "VISIT UGANDA",
         text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit Repellat vero quibusdam exercitationem alias! Assumenda temporibus repellendus odio iusto dicta, sit corporis laudantium Corrupti, suscipit laudantium! Deleniti sequi numquam est libero",
     },
