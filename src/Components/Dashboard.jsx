@@ -4,7 +4,6 @@ import Sidebar from './Sidebar'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
-  const {id} = useParams();
   const [ data, setData ] = useState([])
 
   const navigate = useNavigate();
@@ -28,15 +27,17 @@ const Dashboard = () => {
               <th>ID</th>
               <th>Title</th>
               <th>Description</th>
+              <th>Image</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
             { data.map((info, i) => (
                 <tr key={i}>
-                  <td>{info._id}</td>
+                  <td>{info._id.slice(0, 5) +".."}</td>
                   <td>{info.title}</td>
                   <td>{info.description.slice(0, 10) + "..."}</td>
+                  <img src="{info.image}" alt="" width={50} height={50} />
                   <td className='gap-0.5'>
                   <Link
                   className='text-decoration-none btn btn-sm btn-success' 
@@ -58,7 +59,7 @@ const Dashboard = () => {
   function handleDelete(_id) {
     const confirm = window.confirm("Are you sure to delete?");
     if (confirm) {
-      axios.delete('https://blogapi-se2j.onrender.com/api/v1/users/'+_id)
+      axios.delete('https://blogapi-se2j.onrender.com/api/v1/blogs/'+_id)
       .then(res => {
         alert("Blog deleted");
         navigate('/dashboard');

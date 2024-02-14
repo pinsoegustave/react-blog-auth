@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { IMAGE_DETAILS } from '../constants'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const URL = 'http://localhost:8000/blogs';
+
 
 const Posts = () => {
 
@@ -18,6 +19,7 @@ const Posts = () => {
     <div>
         <div className='mt-4 w-full border border-green-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 h-2/5 gap-4'>
             { data.map((item, i) => (
+              <Link to={`/bloginfo/${item.title}`}>
                 <section key={i} className='m-2 border rounded-sm'>
                     <span className='float-left'>{item.date}</span>
                     <img src={item.image} alt="" />
@@ -25,6 +27,7 @@ const Posts = () => {
                     <p className='m-2'>{item.description.slice(0, 30) + "...."}</p>
                     <span className='float-right font-extralight'>Read More &rarr;</span>
                 </section>
+              </Link>
             ))}
         </div>
     </div>

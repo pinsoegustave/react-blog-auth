@@ -41,11 +41,11 @@ export const Update = () => {
             type="text"
             name="title"
             className="form-control"
+            // value={inputData.title}
             // {...register("title")}
-            onChange={(event) =>
+            onChange={(e) =>
               setInputData({ ...inputData, title: e.target.value })
             }
-            value={inputData.title}
           />
           <br />
           Description: <br />{" "}
@@ -53,19 +53,19 @@ export const Update = () => {
             type="text"
             name="description"
             className="form-control"
+            // value={inputData.description}
             // {...register("description")}
-            value={inputData.description}
             onChange={(e) =>
               setInputData({ ...inputData, description: e.target.value })
             }
           />
           <br />
-          Upload a picture: <br />{" "}
+          Upload a picture: <br />
           <input
             type="file"
             name="image"
             className="form-control"
-            value={inputData.image[0]}
+            // value={inputData.image}
             // {...register("image")}
             onChange={(e) =>
               setInputData({ ...inputData, image: e.target.files })

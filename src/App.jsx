@@ -6,6 +6,7 @@ import Registration from './Components/Registration'
 import Dashboard from './Components/Dashboard'
 import AddEvent from './Components/AddEvent'
 import { Update } from './Components/Update'
+import BlogInfo from './Components/BlogInfo'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path='/dashboard' element={<Dashboard />}></Route>
       <Route path='/addEvent' element={<AddEvent />}></Route>
       <Route path='/update/:id' element={<Update />}></Route>
+      <Route path='/bloginfo/:title' element={<BlogInfo />}></Route>
     </Routes>
     </BrowserRouter>
   )
