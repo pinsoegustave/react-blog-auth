@@ -10,19 +10,19 @@ const Posts = () => {
 
   useEffect(() => {
     axios.get('https://blogapi-se2j.onrender.com/api/v1/blogs')
-    .then(res => setData(res.data))
+    .then(res => setData(res.data.blogs))
     .catch(err => console.log(err))
   }, [])
   
   return (
     <div>
         <div className='mt-4 w-full border border-green-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 h-2/5 gap-4'>
-            { IMAGE_DETAILS.map((item, i) => (
+            { data.map((item, i) => (
                 <section key={i} className='m-2 border rounded-sm'>
                     <span className='float-left'>{item.date}</span>
                     <img src={item.image} alt="" />
                     <h4 className='m-2 font-bold'>{item.title}</h4>
-                    <p className='m-2'>{item.text}</p>
+                    <p className='m-2'>{item.description.slice(0, 30) + "...."}</p>
                     <span className='float-right font-extralight'>Read More &rarr;</span>
                 </section>
             ))}

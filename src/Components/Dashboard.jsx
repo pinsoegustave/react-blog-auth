@@ -10,8 +10,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://blogapi-se2j.onrender.com/api/v1/users')
-    .then(res => setData(res.data))
+    axios.get('https://blogapi-se2j.onrender.com/api/v1/blogs')
+    .then(res => setData(res.data.blogs))
     .catch(err => console.log(err))
   }, [])
   return (
@@ -35,8 +35,8 @@ const Dashboard = () => {
             { data.map((info, i) => (
                 <tr key={i}>
                   <td>{info._id}</td>
-                  <td>{info.username}</td>
-                  <td>{info.email}</td>
+                  <td>{info.title}</td>
+                  <td>{info.description.slice(0, 10) + "..."}</td>
                   <td className='gap-0.5'>
                   <Link
                   className='text-decoration-none btn btn-sm btn-success' 
